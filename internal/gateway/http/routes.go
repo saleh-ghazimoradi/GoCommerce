@@ -17,4 +17,23 @@ func registerRoutes(app *fiber.App) {
 
 	fmt.Println(db)
 
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("GoCommerce Gateway")
+	})
+
+	v1 := app.Group("/v1")
+
+	/*---------------------- User Routes -------------------*/
+	v1.Post("/users/signup")
+	v1.Post("/users/login")
+	v1.Post("/admin/addproduct")
+	v1.Get("/users/productview")
+	v1.Get("/users/search")
+
+	/*----------------------- Other Routes -------------------*/
+	v1.Get("/addtocart")
+	v1.Delete("/removeitem")
+	v1.Get("/cartcheckout")
+	v1.Get("instantbuy")
+
 }
