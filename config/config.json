@@ -1,0 +1,19 @@
+{
+  "general": {
+    "listen": "12081",
+    "log_level": 0,
+    "shutdown_timeout": "5s"
+  },
+  "databases": {
+    "mongodb": {
+      "host": "localhost",
+      "port": "27016",
+      "user": "admin",
+      "pass": "secret",
+      "database_name": "GoCommerce",
+      "auth_source": "admin",
+      "max_pool_size": 100,
+      "timeout": "10s"
+    }
+  }
+}
