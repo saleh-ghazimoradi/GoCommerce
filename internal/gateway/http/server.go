@@ -5,6 +5,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/saleh-ghazimoradi/GoCommerce/config"
 	"github.com/saleh-ghazimoradi/GoCommerce/logger"
+	"github.com/saleh-ghazimoradi/GoCommerce/utils"
 	"net/http"
 	"os"
 	"os/signal"
