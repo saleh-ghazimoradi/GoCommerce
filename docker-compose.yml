@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: gocommerce-mongodb
+    restart: always
+    ports:
+      - "27016:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    volumes:
+      - mongo_data:/data/db
+      - mongo_config:/data/configdb
+
+volumes:
+  mongo_data:
+  mongo_config:
